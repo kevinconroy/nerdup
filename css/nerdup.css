@@ -1,0 +1,396 @@
+/*************************************
+ * NerdUp.com Style Sheet
+ * Author: Kevin Conroy (kevinconroy@gmail.com)
+ * Date: October-November 2007
+ *************************************/
+
+/****** START UNIVERSAL STUFF *********/
+
+* {
+	padding:0;
+	margin:0; 
+}
+
+body {
+	/* font-size: 1.0em; */
+	/* font-family: "Lucida Grande", Helvetica, Arial, Verdana, Courier, sans-serif; */
+    /*font:76%/1.6 "Lucida Grande", Geneva, Arial, Verdana, sans-serif;*/
+   
+   font: 12px/18px "Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+   /*font: 11px/14px Verdana, Helvetica, Arial, sans-serif;*/
+   color: #333333;
+	background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 10px; 
+	margin-bottom: 10px;
+}
+
+p, pre, blockquote, label, ul, ol, dl, fieldset, address {
+	margin-top: 0em; 
+	margin-bottom: 18px;
+}
+
+ul.nobullets {
+    list-style-type: none;
+}
+
+
+a { 
+    font-weight: bold;
+}
+
+a:link {
+	color: #0099cb;
+	text-decoration: underline; 
+}
+
+a:visited {
+	color: #0099cb;
+	text-decoration: underline; 
+}
+
+a:hover {
+	color: #0099cb;
+	text-decoration: underline; 
+}
+
+a:active {
+	color: #0099cb;
+	text-decoration: underline; 
+}
+
+
+h1, a.h1, a.h1:hover, a.h1:visited, a.h1:active  {
+   /*font-family: "Lucida Grande", Helvetica, Arial, Verdana, Courier, sans-serif; */
+	font-size: 20px;
+	/* nerd up blue! 0099cc  lighter: 45c1e5 */
+	color: #0099cc; 
+	text-decoration: none;
+}
+
+h1.hidden {
+    display: none;
+}
+
+h1.black {
+   line-height: 30px;
+   color: #333333;
+}
+
+.blue {
+  color: #0099cc; 
+}
+
+h2, a.h2, a.h2:hover, a.h2:visited, a.h2:active {
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 0.2em;
+    color: #404040;
+    text-decoration: none;
+}
+
+h3 {
+    font-weight: bold;
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 0.2em;
+    color: #404040;
+}
+
+h4 {
+	text-decoration: underline;
+}
+
+
+li, dd {
+	margin-left: 2.5em;
+	padding-top: 5px;
+}
+
+img {
+	border: 0;
+}
+
+fieldset {
+	padding: .5em; 
+}
+
+#bodyContainer {
+	width: 900px;
+	
+	/* This is CSS for "center" */
+	margin-left: auto;
+	margin-right: auto;
+}
+/****** END UNIVERSAL STUFF *********/
+
+/****** START SIGN UP BAR *********/
+#signup {
+   margin-top: 0px;
+   min-height: 25px;
+   width: 100%;
+   background-color: #0099cb;
+   text-align: center;
+   vertical-align: middle;  
+}
+
+span.signupTextHeader {
+   color: white;
+   vertical-align: middle;
+   line-height: 15px;
+   font-size: 10px;
+}
+
+form.signup {
+   min-width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+img.signup, input.signupImage {
+   border: 0px;
+   vertical-align: middle;
+}
+
+input.signupText {
+   padding-top: 1px;
+   width: 200px;
+   vertical-align: middle;
+}
+/****** END SIGN UP BAR *********/
+
+/******* START HEADER ***********/
+#header {
+	margin-top: 0px;
+	width: 100%;
+	background-image: url('/images/header/background.gif');
+	background-repeat: repeat-x;
+	height: 87px;
+}
+
+#header_container {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	float: left;
+	height: 87px;
+	vertical-align: bottom;
+}
+
+#menu {
+	float: left;
+	height: 65px;
+   margin-left: 20px;
+   margin-top: 22px;
+	text-align: center;
+}
+
+#menu img {
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+#header_base {
+   margin-top: 0px;
+   height: 3px;
+   width: 100%;
+   background-color: #0099cb;
+   text-align: center;
+   vertical-align: middle;  
+   float: left;
+}
+
+/******* END HEADER ***********/
+
+#wrapper {
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-top: 0px; 
+}
+
+#container {
+	float: left;
+	width: 100%;
+	display:inline;
+}
+
+#leftSidebar {
+	float:left;
+	width: 245px;
+	margin-left: 15px;
+	margin-top:1em;
+	display: inline;
+	text-align: left;
+}
+
+.leftImage {
+   float: left;
+   margin: 10px;
+   margin-right: 15px;
+}
+
+.rightImage {
+   float: right;
+   margin: 10px;
+   margin-left: 15px;
+}
+
+
+#text {
+	width: 600px;
+	padding-left: 10px;
+	float:left;
+	margin-top:1em;
+	margin-bottom: 1.5em;
+	text-align: left;
+}
+
+#textFull {
+	width: 100%;
+	margin-top:1em;
+	float: left;
+}
+
+#breadcrumbs {
+	float:left;
+	font-size: 0.85em;
+	margin-top: -0.2em;
+	margin-bottom: 0.5em;
+}
+
+#footer {
+	margin-top: 10px;
+	text-align: center; 
+}
+
+#lowerBanner {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-size: 0.9em;
+}
+
+#copyright, div.small {
+	font-size: 0.9em;
+}
+
+.pipe {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#leftSidebar ul {
+	margin-left: 10px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+	margin-top: 0px;
+	border: 1px solid #cccccc;
+	border-width: 1px 0 0 0;
+	background-color: #ffffff; 
+}
+
+#leftSidebar ul li {
+	list-style: none;
+	display: inline;
+	margin: 0; 
+}
+
+#leftSidebar ul li a {
+	display: block;
+	padding: .25em .5em;
+	text-decoration: none;
+	color: #000000;
+	border-bottom: 1px solid #cccccc;
+	font: normal 0.9em; 
+}
+
+#leftSidebar ul li a:hover {
+	color: #ffffff;
+	background-color: #990000; 
+}
+
+.leftPadded {
+	padding-left: 20px;
+}
+
+.topPadded {
+	padding-top: 10px;
+}
+
+p.bold {
+	font-weight: bold;
+}
+
+div.border {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px dashed #cccccc;
+}
+
+div.blueCallout {
+   border: 1px solid #cccccc;
+   margin: 10px; 
+   padding: 10px; 
+   background-color: #f6fcfe;
+}
+
+div.leftborder {
+	margin-left: 10px;
+	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-top: 0px;
+}
+
+div.quote {
+   background-image: url('/images/left/quote.gif');
+   background-repeat: no-repeat;
+   padding-left: 5px;
+   padding-top: 8px;
+   text-align: left;
+   font-style: italic;
+   text-indent: 20px;
+}
+
+div.attribution {
+   margin-top: 10px;
+   /*font-size: 0.75em;*/
+}
+
+img.largeImage {
+    vertical-align: middle;
+    border: 0px;    
+}
+
+img.float-right {
+    float: right;    
+}
+
+img.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blue {
+    color: #0099cc; 
+    font-weight: bold;
+}
+
+#email {
+    padding: 0.2em;
+    margin-bottom: 2px;
+    width: 175px;
+    border: 1px solid #bbbbbb;
+}
+.mceEditor, .uniForm .inlineLabels textarea.mceEditor {
+	width: 600px;
+	height: 400px;
+	
+}

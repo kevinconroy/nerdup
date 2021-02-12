@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>{{ page.title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="/css/nerdup.css" media="all" />
+  <script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+  <script type="text/javascript" language="javascript" src="/javascript/nerdup.js"></script>
+  <meta name="google-site-verification" content="33o0luO9BQATJwlTmJkvAghju4KSYExzSP45GUq8b34" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+</head>
+
+<body>
+  <div id="signup">
+    <!-- NerdWord Sign up Form -->
+    <form name="ccoptin" action="http://visitor.constantcontact.com/d.jsp" target="_blank" method="post" class="signup">
+      <input type="hidden" name="m" value="1101655399798">
+      <input type="hidden" name="p" value="oi">
+      <input type="hidden" name="ref" value="header" />
+
+      <a href="/nerdword/"><img src="/images/header/signUpForNerdWordText.gif" alt="Sign up for our monthly job e-mail, 'The NerdWord.'" width="284"
+          height="24" class="signup" border="0"></a>
+
+      <input class="signupText" type="text" size="25" maxlength="100" name="ea" value="e-mail" style="color: #777777;" onClick="clearNerdWord(this);"
+        onFocus="clearNerdWord(this);" onBlur="fillNerdWord(this);" />
+
+      <input type="image" src="/images/header/signUpButton.gif" alt="sign up" width="67" height="25" class="signupImage" />
+    </form>
+  </div>
+
+  <div id="header">
+    <div id="header_container">
+      <!-- Nerd Up Logo -->
+      <div id="logo">
+        <a href="/"><img id="logoImage" src="/images/header/logo.gif" alt="Nerd Up: Hi Tech and Executive Recruiting" width="201" height="87" /></a>
+      </div>
+
+      <!-- Horizontal Menu -->
+      <div id="menu">
+        <a href="/jobs/"><img id="jobs" src="/images/header/jobs_off.gif" alt="great jobs" width="50" height="65"
+            onmouseover="rollover('jobs', '/images/header/jobs_on.gif');" onmouseout="rollover('jobs', '/images/header/jobs_off.gif');" /></a>
+        <a href="/nerds/"><img id="nerds" src="/images/header/nerds_off.gif" alt="super nerds" width="58" height="65"
+            onmouseover="rollover('nerds', '/images/header/nerds_on.gif');" onmouseout="rollover('nerds', '/images/header/nerds_off.gif');" /></a>
+        <a href="/executives/"><img id="executives" src="/images/header/executives_off.gif" alt="top-notch executives" width="106" height="65"
+            onmouseover="rollover('executives', '/images/header/executives_on.gif');"
+            onmouseout="rollover('executives', '/images/header/executives_off.gif');" /></a>
+        <a href="/employers/"><img id="employers" src="/images/header/employers_off.gif" alt="enlightened employers" width="103" height="65"
+            onmouseover="rollover('employers', '/images/header/employers_on.gif');"
+            onmouseout="rollover('employers', '/images/header/employers_off.gif');" /></a>
+        <a href="/about/"><img id="about" src="/images/header/about_off.gif" alt="why we're different" width="151" height="65"
+            onmouseover="rollover('about', '/images/header/about_on.gif');" onmouseout="rollover('about', '/images/header/about_off.gif');" /></a>
+      </div>
+    </div>
+    <div id="header_base">
+      <!-- This is the blue bar at the bottom of the header. -->
+    </div>
+  </div>
+
+  <div id="bodyContainer">
+    <div id="wrapper">
+      <div id="container">
+        <div id="textFull">
+
+          {{ content }}
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <img src="/images/line.jpg" alt="line" class="topPadded" width="556" height="5" />
+      <div id="lowerBanner">
+        <a href="/about/">about nerd up</a> <span class="pipe">|</span> <a href="/nerdword/">sign up for the nerd word!</a> <span
+          class="pipe">|</span> <a href="/contact/">contact us</a>
+      </div>
+      <div id="copyright">
+        <p>
+          Copyright &copy; Nerd Up, 2008-2021.<br />
+          <script type="text/javascript">makeAddress("egbert", "nerdup.com");</script>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Analytics Tracking Code -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-392776-2']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</body>
+
+</html>

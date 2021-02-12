@@ -1,0 +1,165 @@
+@import "uni-form-generic.css";
+/* Your styles below */
+/* Keep in mind that wherever you see "Required property" it means that the property must exist, adjust it's value to your liking */
+
+/* Generals */
+.uniForm fieldset{
+  margin:2em 0; 
+}
+.uniForm fieldset.top{
+  margin:15px 0; 
+}
+.uniForm fieldset legend{
+  color:#43340B; /* Reset IE */
+  font-weight:bold; 
+  font-size:120%; 
+}
+.uniForm fieldset legend.bold{
+  font-size:100%;
+}
+
+
+.uniForm .ctrlHolder{ /* This is the main unit that contains our form elements */
+  padding:4px; 
+  margin-top: 5px;
+}
+.uniForm .buttonHolder{
+  text-align:right; /* Recommended */
+}
+.uniForm .focused{
+  background:#FFFCDF; 
+}
+
+/* .inlineLabels */
+.uniForm .inlineLabels label,
+.uniForm .inlineLabels .label{
+  width: 100px; /* Required property */
+  text-align: right;
+  font-size: 1em;
+}
+.uniForm .inlineLabelsSm label,
+.uniForm .inlineLabelsSm .label{
+  text-align: right;
+  font-size: 1em;
+}
+.uniForm .inlineLabelsMed label,
+.uniForm .inlineLabelsMed .label{
+  width: 75px;
+  text-align: right;
+  font-size: 1em;
+}
+.uniForm .inlineLabelsMed .textInput,
+.uniForm .inlineLabelsMed .fileUpload{
+  width:180px; /* Required property */
+}
+
+.uniForm .inlineLabels .textInput,
+.uniForm .inlineLabels .fileUpload{
+  width:250px; /* Required property */
+}
+.uniForm .inlineLabels .textInputSmall {
+  width:100px; /* Required property */
+}
+.uniForm .inlineLabels .selectInput{
+  width:250px; /* Required property */
+}
+.uniForm .inlineLabels .selectInputSmall{
+  
+}
+.uniForm .inlineLabels textarea{
+  width:200px; /* Required property */
+  height:12em; 
+}
+.uniForm .inlineLabels .formHint{
+}
+
+.formHint {
+   position:absolute;
+   float: left;
+   z-index:1000;
+   margin-top: 0px;
+   margin-left: 390px; 
+   /* IE does things a little differently... of course. */
+   _margin-left:255px; 
+   width:450px;
+   padding:4px;
+   border:1px solid #cccccc;
+   background:#f5f5f5;
+   color:#444;
+   visibility:hidden;
+}
+form .formHint small{
+   font-size:105%;
+}
+form div:hover .formHint, form div.focused .formHint {
+   visibility:visible;
+}
+
+
+/* .blockLabels */
+.uniForm .blockLabels .textInput,
+.uniForm .blockLabels .fileUpload{
+  width:53%; /* Required property */
+}
+
+.uniForm .blockLabels .selectInput{
+  display:block;
+  width:53.5%; /* Required property */
+}
+.uniForm .blockLabels textarea{
+  width:53%; /* Required property */
+  height:12em; 
+}
+.uniForm .blockLabels .formHint{
+  width:45%; /* Required property */
+}
+
+/* Columns */
+.uniForm .col{
+  width:47.9%; /* Required property */
+  margin:0 2% 0 0; 
+}
+.uniForm .columnLeft{
+  width:49%; /* Required property */
+}
+.uniForm .columnRight{
+  width:49%; /* Required property */
+}
+
+/* Messages */
+.uniForm #errorMsg{
+  background:#FFDFDF url(images/uf_error.png) repeat scroll 0%;
+  border:1px solid #df7d7d; border-width:1px 0;
+  margin:0 0 1em 0; padding:1em;
+}
+.uniForm .error{
+  background:#FFDFDF url(images/uf_error.png) repeat scroll 0%;
+  border:1px solid #df7d7d; border-width:1px 0;
+}
+  .uniForm #errorMsg dt,
+  .uniForm #errorMsg h3{
+    margin:0 0 .5em 0;
+    font-size:110%;
+    line-height:100%;
+    font-weight:bold;
+  }
+  .uniForm #errorMsg dd{
+    margin:0; padding:0;
+  }
+    .uniForm #errorMsg ol{
+      margin:0; padding:0;
+    }
+      .uniForm #errorMsg ol li{
+        margin:0; padding:2px;
+        list-style-position:inside;
+        border-bottom:1px dotted #df7d7d;
+        position:relative;
+      }
+    .uniForm .errorField{
+      color:#43340B;
+      margin-left: 110px; 
+      margin-bottom:4px;
+      margin-top: 0px;
+      margin-right: 0px;
+      padding:5px;
+    }

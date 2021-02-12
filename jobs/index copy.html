@@ -1,0 +1,156 @@
+---
+layout: default
+title: Jobs for Superhero Nerds from Nerd Up
+leftPhoto: /images/left/jobs.jpg
+page: jobs
+breadcrumb: Jobs
+---
+
+
+<% Dim id, showAllJobs showAllJobs=true id=Request.QueryString("id") If (id <> "") Then
+  showAllJobs = false
+  End If
+
+  ReDim jobs_(0)
+  Set jobService_= new JobService
+
+  If (showAllJobs = true) Then
+  jobs_ = jobService_.loadAllActiveJobs()
+  Else
+  jobs_ = jobService_.loadJobById(id)
+  End If
+
+  Dim foundJob
+  foundJob = false
+
+  If (isArray(jobs_)) Then
+  If (Ubound(jobs_) > 0) Then
+  foundJob = true
+  End If
+  End If
+
+  If (foundJob) Then
+  %>
+
+  <% If (showAllJobs=true) Then %>
+    <div>
+      <img src="/images/content/JobAcrobatics.jpg" alt="Finding a Job Doesn't Require Acrobatics" class="center" style="padding-left: 10px;">
+    </div>
+    <% End If %>
+
+      <% If (showAllJobs=true) Then %>
+        <div style="float: right; width: 150px;" class="blueCallout">
+
+          <h2>Which one is your dream job?</h2>
+          <p>
+            This isn't just a list of jobs. It's list of positions for the best-of-the-best. These are jobs that will rock the socks off of a <a
+              href="nerds.asp">Superhero Nerd</a>. These are the kinds of jobs you want to get out of the bed in the morning for. If you think you've
+            got what it takes,
+            <script type="text/javascript">makeAddressWithLabel("egbert", "nerdup.com", "send us a pigeon");</script>.
+          </p>
+          <p>
+            Please note though, if you're not funny and extremely driven, or if you've got an ego the size of Milwaukee, or if you don't mind thumb
+            twiddling away your days, then <a href="employers.asp">our employers</a> and jobs probably aren't for you.
+          </p>
+        </div>
+
+        <div>
+          <h2>Great, Amazing, Rock-Your-Socks Off Jobs</h2>
+          <ul>
+            <% For i=LBound(jobs_) To UBound(jobs_) - 1 Set job_=jobs_(i) %>
+              <li><a href="jobs.asp?id=<%=job_.id%>">
+                  <%=job_.title%>
+                    <% If (job_.location <> "") Then %> (<%=job_.location%>) <% End If %>
+                </a></li>
+              <% Next %>
+          </ul>
+        </div>
+
+        <% End If %>
+
+          <% For i=LBound(jobs_) To UBound(jobs_) - 1 Set job_=jobs_(i) %>
+            <% If (showAllJobs=true) Then %>
+              <div class="border">
+                <% Else %>
+                  <div>
+                    <p>
+                      <a href="jobs.asp">Back to all jobs</a>
+                    </p>
+                    <% End If %>
+                      <a name="job<%=job_.id%>"></a>
+                      <h2><a href="jobs.asp?id=<%=job_.id%>">
+                          <%=job_.title%>
+                            <% If (job_.location <> "") Then %> (<%=job_.location%>) <% End If %>
+                        </a></h2>
+                      <p>
+                        <%=job_.description%>
+                      </p>
+
+                      <p>
+                        To apply, send an e-mail to
+                        <script type="text/javascript">makeAddressAndSubject("egbert", "nerdup.com", "<%=job_.title%> (ID <%=job_.id%>)");</script>
+                        with the subject line "<%=job_.title%> (ID <%=job_.id%>)". Attach your resume and tell us why this is your dream job.
+                      </p>
+                  </div>
+
+                  <% Next %>
+
+
+                    <% If (showAllJobs=true) Then %>
+                      <div class="border">
+                        <img src="images/content/TPSReports.jpg" alt="No More TPS Reports!" class="rightImage" />
+
+                        <h2>Want to look forward to waking up for work?</h2>
+                        <p>
+                          This isn't buzzword bingo, but we've got job opportunities for all the major languages and the less-major ones too. From
+                          requirements analysis, product development, and engineering to administration, finance, marketing and sales, feel free to <a
+                            href="skills.asp">check out the skills we're often hired to search for</a>.
+                        </p>
+                        <p>
+                          We hook up dynamo nerds with juicier jobs, all of which require amazing skills. Black belt not required, but definitely
+                          bring along your A game.
+                        </p>
+                        <p>
+                          You can stay up to date with the latest job postings through our awesome newsletter, the Nerd Word. <a
+                            href="nerd_word.asp">Sign up today and Nerd Up!</a>
+                        </p>
+                      </div>
+                      <% Else %>
+
+                        <div class="border">
+
+                          <div class="blueCallout">
+                            <h2>Is this your dream job?</h2>
+                            <p>
+                              If this is your dream job, send an e-mail to
+                              <script
+                                type="text/javascript">makeAddressAndSubject("egbert", "nerdup.com", "<%=job_.title%> (ID <%=job_.id%>)");</script>
+                              with the subject line "<%=job_.title%> (ID <%=job_.id%>)". Attach your resume and tell us why we should pick you over
+                                  all of the other <a href="nerds.html">Superhero Nerds.</a>
+                            </p>
+                            <h2>Not a perfect fit?</h2>
+                            <p>
+                              No worries, <a href="jobs.asp">view all open jobs</a> or <a href="contact_us.asp">drop us a line</a> and we'll help you
+                              find a job that's such a perfect fit you could wear spandex.
+                            </p>
+                          </div>
+
+                        </div>
+                        <% End If %>
+
+                          <% Else %>
+
+                            <h1>Oh nos! We couldn't find that job!</h1>
+
+                            <p>
+                              <center>
+                                <a href="jobs.asp"><img src="images/404.jpg" border="0" style="margin: 10px;"></a><br />
+                              </center>
+                            </p>
+
+                            <p>
+                              Try <a href="jobs.asp">viewing all jobs</a> and see if you can find the one that you were looking for. If not, <a
+                                href="contact_us.asp">send us an e-mail</a> and let us know that something is borked.
+                            </p>
+
+                            <% End If %>
